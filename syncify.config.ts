@@ -1,4 +1,3 @@
-//@ts-nocheck
 import { defineConfig } from '@syncify/cli';
 
 // COMMENTED OUT OPTIONS ARE NOT YET AVAILABLE
@@ -57,18 +56,6 @@ export default defineConfig({
     }
   ],
 
-  // EXAMPLE: SPAWNED PROCESSES
-
-  spawn: {
-    // build: {
-    //   rollup: 'rollup -c config/rollup.config.js'
-    // },
-    // watch: {
-    //   rollup: 'rollup -c config/rollup.config.js -w',
-    //   webpack: 'webpack --watch --color --config config/webpack.config.js',
-    //   esbuild: 'esbuild src/scripts/ts/index.ts --outfile=theme/assets/esbuild-bundle.js --bundle --watch --color=true'
-    // }
-  },
   views: {
 
     // pages: {}
