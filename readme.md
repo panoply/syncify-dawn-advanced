@@ -1,4 +1,4 @@
-# E2E Test ~ Syncify Dawn
+# Syncify Strap ~ Dawn Sample
 
 An E2E structure and output test wires up a customized architecture. The case takes advantage of various features shipped with Syncify and aims to match the requirements of a common project. Containing theme files are from [Dawn](https://github.com/Shopify/dawn) and files contained directories named using a single `_` character are **test examples**.
 
@@ -8,9 +8,14 @@ An E2E structure and output test wires up a customized architecture. The case ta
 
 Fork or download this repository. You should use install [pnpm](https://pnpm.js.org/en/cli/install) and use it instead of npm or yarn (though they are also supported). The first things you need to do is simply install the dependencies. Given this a test case sample, there are additional modules installed which you probably wont needs if you're using this as a strap starting point.
 
+1. `pnpm i`
+2. `pnpm build`
+
+Go to the [Syncify](https://github.com/panoply/syncify) repository and review readme.
+
 ### Requirements
 
-You will need to update the `env.example` file first. Say (for example) your myshopify store name is `awesome-jeans` then you will need to set this information:
+You will need to update the `env.example` file first. Say (for example) your myshopify store name is `awesome-jeans` then you will need to set this information.
 
 Rename the `.env.example` file to `.env` and enter this:
 
@@ -19,6 +24,8 @@ Rename the `.env.example` file to `.env` and enter this:
 #
 awesome-jeans_api_token = 'TOKEN-GOES-HERE'
 ```
+
+> Update the commands in `package.json` file and of course the `stores` option in the `syncify.config.ts` file.
 
 ### Commands
 
