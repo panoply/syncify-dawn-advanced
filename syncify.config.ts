@@ -173,7 +173,7 @@ export default defineConfig({
   processors: {
     esbuild: {
       bundle: true,
-      sourcemap: true,
+      sourcemap: false,
     },
     sass: {
       sourcemap: true,
