@@ -1,6 +1,6 @@
 import { defineConfig } from '@syncify/cli';
 
-// COMMENTED OUT OPTIONS ARE NOT YET AVAILABLE
+// SOME COMMENTED OUT OPTIONS ARE NOT YET AVAILABLE
 // BUT WILL BE MADE POSSIBLE IN FUTURE VERSIONS
 // ALL CONFIG OPTIONS ARE TYPED AND WELL ANNOTATED
 
@@ -9,7 +9,6 @@ export default defineConfig({
   clean: true,
   input: 'src',
   output: 'theme',
-  hot: {},
   paths: {
 
     // metafields: 'metafields/**/*',
@@ -38,22 +37,37 @@ export default defineConfig({
     ],
   },
 
+  // SPAWN PROCESS EXAMPLE
+
+  spawn: {
+    build: {
+      webpack: 'webpack --color --config webpack.config.js',
+    },
+    watch: {
+      webpack: 'webpack --watch --color --config webpack.config.js',
+    }
+  },
+
   // ADD YOUR STORE/S + THEME/S
 
   stores: [
     {
-      domain: 'syncify',
+      domain: 'syncify',     // Replace this with your store domain
       themes: {
-        custom: 136656060657
+        dev: 136656060657, // Replace this with your theme id
+        // prod: 123456789 // Uncomment to target an additional theme in this store
       }
     },
-    {
-      domain: 'boefje',
-      themes: {
-        dev: 43989205050,
-        prod: 43989205050
-      }
-    }
+
+    // UNCOMMENT BELOW TO SYNC TO AN ADDITION STORE AND THEMES
+
+    // {
+    //   domain: '',
+    //   themes: {
+    //     dev: 123456789,
+    //     prod: 123456789
+    //   }
+    // }
   ],
 
   views: {
@@ -170,6 +184,9 @@ export default defineConfig({
       }
     },
   },
+
+  // PROCESSES EXAMPLE THIS IS USED BY TRANSFORMS
+
   processors: {
     esbuild: {
       bundle: true,
@@ -180,7 +197,9 @@ export default defineConfig({
       style: 'compressed',
       include: ['node_modules/'],
     },
-    postcss: []
+    postcss: [
+      require('autoprefixer')()
+    ]
   },
   terser: {
     json: {

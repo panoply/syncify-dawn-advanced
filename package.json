@@ -1,5 +1,5 @@
 {
-  "name": "@syncify/e2e-custom",
+  "name": "@syncify/dawn-advanced",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -14,14 +14,12 @@
     "download": "syncify syncify -t custom --download",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "license": "ISC",
-  "prettier": "@sissel/prettier-config",
+  "license": "MIT",
   "eslintConfig": {
     "extends": "@sissel/eslint-config",
     "ignorePatterns": [
       "docs",
-      "dist",
-      "test/e2e/theme"
+      "dist"
     ],
     "rules": {
       "object-curly-newline": "off",
@@ -30,7 +28,6 @@
   },
   "devDependencies": {
     "@sissel/eslint-config": "^1.1.0",
-    "@sissel/prettier-config": "^1.1.0",
     "@syncify/cli": "0.2.2-beta",
     "autoprefixer": "^10.4.14",
     "bootstrap": "^5.3.0",
@@ -38,12 +35,10 @@
     "eslint": "^8.44.0",
     "postcss": "^8.4.24",
     "prettier": "^3.0.0",
-    "rollup": "^3.26.1",
     "sass": "^1.63.6",
     "sharp": "^0.32.1",
     "svg-sprite": "^2.0.2",
     "svgo": "^3.0.2",
-    "tsup": "^7.1.0",
     "webpack": "^5.88.1",
     "webpack-cli": "^5.1.4"
   },
