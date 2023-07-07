@@ -6,12 +6,12 @@
   "author": "",
   "main": "index.js",
   "scripts": {
-    "dev": "syncify syncify -t custom --watch --hot",
-    "dev:multi": "syncify syncify,boefje --syncify custom --boefje dev,prod --watch",
+    "dev": "syncify sissel --theme dev --watch --hot",
+    "dev:multi": "syncify sissel,another-store --syncify custom -another-store dev,prod --watch",
     "build": "syncify --build --prod --clean",
-    "upload": "syncify syncify -t custom --upload",
-    "upload:multi": "syncify syncify,boefje --syncify custom --boefje dev,prod --upload",
-    "download": "syncify syncify -t custom --download",
+    "upload": "syncify sissel --theme dev --upload",
+    "download": "syncify sissel --theme dev --download",
+    "upload:multi": "syncify sissel,another-store --syncify custom --another-store dev,prod --upload",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "MIT",
